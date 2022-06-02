@@ -44,6 +44,10 @@ p {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: hsl(224deg, 100%, 72%);
+}
+
 .input {
   max-width: 18rem;
   width: 100%;
@@ -121,6 +125,7 @@ nav .logo {
   color: hsl(243deg, 87%, 12%);
   background-image: url(../../images/bg-curve-desktop.svg);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .testimonial .container {
@@ -191,8 +196,21 @@ footer .footer-links {
   list-style-type: none;
   color: white;
 }
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-links a:hover {
+  color: hsl(224deg, 100%, 72%);
+}
 footer .footer-icons {
   display: flex;
+}
+footer .footer-icons a:hover svg {
+  fill: hsl(224deg, 100%, 72%);
+}
+footer .footer-icons a:hover div {
+  border: 1px solid hsl(224deg, 100%, 72%);
 }
 footer .footer-icons div {
   display: flex;
