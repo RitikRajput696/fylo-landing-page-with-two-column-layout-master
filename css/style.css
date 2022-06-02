@@ -180,11 +180,13 @@ nav .logo {
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 2rem;
   background-color: hsl(243deg, 87%, 12%);
 }
 footer .footer-links {
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   list-style-type: none;
   color: white;
@@ -192,9 +194,52 @@ footer .footer-links {
 footer .footer-icons {
   display: flex;
 }
+footer .footer-icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0.5rem;
+}
 footer .footer-icons svg {
   border-radius: 50%;
   fill: white;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.footer-logo-image {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.footer-logo {
+  height: 5rem;
+  width: auto;
+}
+.footer-logo svg {
+  fill: white;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-email,
+.footer-phone {
+  display: flex;
+  gap: 1rem;
+}
+.footer-email a,
+.footer-phone a {
+  color: white;
+  text-decoration: none;
 }
