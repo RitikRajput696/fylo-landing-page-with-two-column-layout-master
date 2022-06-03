@@ -21,6 +21,7 @@ a {
   max-width: 1150px;
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 h1 {
@@ -58,7 +59,6 @@ p {
   width: 100%;
   height: 3em;
   padding: 0 1rem;
-  margin: 0 0.5rem 0 0;
 }
 
 .testimonial-card {
@@ -105,7 +105,7 @@ nav .nav-links {
   list-style-type: none;
 }
 nav .nav-links a {
-  padding: 0.5em 1.5em;
+  padding: 0.5rem 1.5rem;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -116,13 +116,17 @@ nav .logo {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0rem 0 5rem 0;
+  padding-bottom: 5rem;
 }
 .hero .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+}
+.hero input {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial {
@@ -280,4 +284,91 @@ footer .footer-icons svg {
 .footer-phone a {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+  }
+  footer .footer-contact {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero .hero-img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 3rem;
+  }
+  .hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero p {
+    max-width: 30rem;
+  }
+  .hero input {
+    width: 100%;
+  }
+  .hero button {
+    width: 100%;
+  }
+
+  .testimonial .container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 3rem;
+  }
+
+  .testimonial-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  .testimonial-text p {
+    max-width: 30rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contact .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-contact,
+footer .footer-logo,
+footer .footer-links {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  footer .footer-icons {
+    place-content: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  nav .logo {
+    width: 7rem;
+  }
+
+  .nav-link a {
+    padding: 0.3rem 1rem !important;
+    background-color: red;
+  }
 }
