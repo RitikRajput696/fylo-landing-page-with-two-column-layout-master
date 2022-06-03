@@ -132,7 +132,7 @@ nav .logo {
 .testimonial {
   padding: 10rem 0;
   color: hsl(243deg, 87%, 12%);
-  background-image: url(../../images/bg-curve-desktop.svg);
+  background-image: url(/images/bg-curve-desktop.svg);
   background-repeat: no-repeat;
   background-size: 300% 100%;
   background-position: bottom;
